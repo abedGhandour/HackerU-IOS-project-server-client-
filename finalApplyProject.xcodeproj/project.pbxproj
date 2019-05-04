@@ -14,6 +14,8 @@
 		ADF2C72E2271F0FE0002C5E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF2C72C2271F0FE0002C5E5 /* LaunchScreen.storyboard */; };
 		ADF2C7392271F0FE0002C5E5 /* finalApplyProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2C7382271F0FE0002C5E5 /* finalApplyProjectTests.swift */; };
 		ADF2C7442271F0FE0002C5E5 /* finalApplyProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2C7432271F0FE0002C5E5 /* finalApplyProjectUITests.swift */; };
+		ADF5EE16227B475700E34ADF /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF5EE15227B475700E34ADF /* ExternalAccessory.framework */; };
+		ADF5EE19227C603800E34ADF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF5EE18227C603800E34ADF /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		ADF2C73F2271F0FE0002C5E5 /* finalApplyProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = finalApplyProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF2C7432271F0FE0002C5E5 /* finalApplyProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalApplyProjectUITests.swift; sourceTree = "<group>"; };
 		ADF2C7452271F0FE0002C5E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADF5EE15227B475700E34ADF /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		ADF5EE17227B475700E34ADF /* finalApplyProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = finalApplyProject.entitlements; sourceTree = "<group>"; };
+		ADF5EE18227C603800E34ADF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF5EE16227B475700E34ADF /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +83,12 @@
 		ADF2C7172271F0FB0002C5E5 = {
 			isa = PBXGroup;
 			children = (
+				ADF5EE18227C603800E34ADF /* Default-568h@2x.png */,
 				ADF2C7222271F0FB0002C5E5 /* finalApplyProject */,
 				ADF2C7372271F0FE0002C5E5 /* finalApplyProjectTests */,
 				ADF2C7422271F0FE0002C5E5 /* finalApplyProjectUITests */,
 				ADF2C7212271F0FB0002C5E5 /* Products */,
+				ADF5EE14227B475700E34ADF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +105,7 @@
 		ADF2C7222271F0FB0002C5E5 /* finalApplyProject */ = {
 			isa = PBXGroup;
 			children = (
+				ADF5EE17227B475700E34ADF /* finalApplyProject.entitlements */,
 				ADF2C7232271F0FB0002C5E5 /* AppDelegate.swift */,
 				ADF2C7252271F0FB0002C5E5 /* ViewController.swift */,
 				ADF2C7272271F0FB0002C5E5 /* Main.storyboard */,
@@ -123,6 +132,14 @@
 				ADF2C7452271F0FE0002C5E5 /* Info.plist */,
 			);
 			path = finalApplyProjectUITests;
+			sourceTree = "<group>";
+		};
+		ADF5EE14227B475700E34ADF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADF5EE15227B475700E34ADF /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +210,11 @@
 				TargetAttributes = {
 					ADF2C71F2271F0FB0002C5E5 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
 					};
 					ADF2C7332271F0FE0002C5E5 = {
 						CreatedOnToolsVersion = 10.1;
@@ -230,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF2C72E2271F0FE0002C5E5 /* LaunchScreen.storyboard in Resources */,
+				ADF5EE19227C603800E34ADF /* Default-568h@2x.png in Resources */,
 				ADF2C72B2271F0FD0002C5E5 /* Assets.xcassets in Resources */,
 				ADF2C7292271F0FB0002C5E5 /* Main.storyboard in Resources */,
 			);
@@ -432,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = finalApplyProject/finalApplyProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZKN32U2V3;
 				INFOPLIST_FILE = finalApplyProject/Info.plist;
@@ -450,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = finalApplyProject/finalApplyProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZKN32U2V3;
 				INFOPLIST_FILE = finalApplyProject/Info.plist;
